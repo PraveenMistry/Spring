@@ -1,0 +1,2 @@
+Dependency Injection (or sometime called wiring) helps in gluing these classes together and at the same time keeping them independent
+You can mix both, Constructor-based and Setter-based DI but it is a good rule of thumb to use constructor arguments for mandatory dependencies and setters for optional dependencies.

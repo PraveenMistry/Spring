@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--constructorBased-->
+    <!-- Definition for textEditor bean -->
+    <bean id="textEditorBean" class="constructorBased.com.learn.TextEditor">
+        <constructor-arg ref="spellCheckerBean"/>
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id="spellCheckerBean" class="constructorBased.com.learn.SpellChecker"></bean>
+    <!-- / constructorBased-->
+
+
+    <!--setterBased-->
+    <!-- Definition for textEditor bean -->
+    <bean id="setterTextEditorBean" class="setterBased.com.learn.TextEditor">
+        <property name = "spellChecker" ref = "setterSpellCheckerBean"/>
+    </bean>
+
+    <!-- Definition for spellChecker bean -->
+    <bean id="setterSpellCheckerBean" class="setterBased.com.learn.SpellChecker"></bean>
+    <!-- / setterBased-->
+
+
+</beans>
